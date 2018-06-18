@@ -106,4 +106,4 @@ if (empty($TMUX))
 endif
 
 set background=dark
-colorscheme hybrid
+silent! colorscheme hybrid

@@ -21,8 +21,8 @@ Pre-requisite:
         ```
 - Ctags (install via scoop: `scoop installl ctags`)
 
-Optinal Dependencies:
----------------------
+Optional Dependencies:
+-----------------------
 - Python 2.7, Python 3.6
 - Node 8.9.x, npm 5.5.x
 - Visual C++ Redistributable for Visual Studio 2015 ( https://www.microsoft.com/en-my/download/details.aspx?id=48145 )

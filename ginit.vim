@@ -1,4 +1,4 @@
 
 set background=dark
-colorscheme one
+silent! colorscheme one
 
