@@ -8,11 +8,6 @@ set nocompatible
 let g:python3_host_prog='C:/Python36-32/python.exe'
 let g:python_host_prog='C:/Python27/python.exe'
 
-" search highlight set to yellow
-"hi Search ctermbg=3	
-"hi MatchParen cterm=bold ctermbg=none
-"
-
 call plug#begin('~/AppData/Local/nvim/plugged')
 
 Plug 'tpope/vim-sensible'
@@ -26,7 +21,6 @@ Plug 'rafi/awesome-vim-colorschemes'
 
 Plug 'vim-scripts/highlight.vim'
 Plug 'Townk/vim-autoclose'
-
 Plug 'neomake/neomake'
 
 Plug 'junegunn/goyo.vim'
@@ -60,11 +54,9 @@ let g:tagbar_autofocus = 1
 
 " Limelight configurations
 " Color name (:help cterm-colors) or ANSI code 
-let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
 " Color name (:help gui-colors) or RGB color 
-let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
 
 autocmd! User GoyoEnter Limelight
