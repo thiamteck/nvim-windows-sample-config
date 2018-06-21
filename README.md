@@ -5,6 +5,17 @@ Just a simple Neovim configuration which was used at Windows environment.
 
 Work in progress.
 
+Notable enhancements:
+----------------------
+- Log files viewing:
+    - Highlight lines with previous matched pattern via Highlight.vim: <C-h><C-j>
+- Tuned for general writing:
+    - distraction free writing via [Goyo] (https://github.com/junegunn/goyo.vim) & [Limelight] (https://github.com/junegunn/limelight.vim)
+    - grammar check with [vim-wordy] (https://github.com/reedes/vim-wordy)
+    - include [Markdown with Vim] (https://github.com/gabrielelana/vim-markdown)
+- Enhanced UI with [NERDTree] (https://github.com/scrooloose/nerdtree), [vim-airline] (https://github.com/vim-airline/vim-airline)    
+- Many [awesome colorscheme] (https://github.com/rafi/awesome-vim-colorschemes) to choose from, and able to use different colorscheme for GUI and console mode. 
+
 Tested with:
 ---------------
 - OS: Windows 10
@@ -20,6 +31,7 @@ Pre-requisite:
         iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
         ```
 - Ctags (install via scoop: `scoop installl ctags`)
+- Git 
 
 Optional Dependencies:
 -----------------------
