@@ -1,12 +1,12 @@
-" General Configurations
+"# General Configurations
 
 " must be first line
 set nocompatible
 
 " Installation with virtualenv prompt warning during :checkhealth, install
 " neovim in global instead
-let g:python3_host_prog='C:/Python36-32/python.exe'
-let g:python_host_prog='C:/Python27/python.exe'
+let g:python3_host_prog=expand('$HOME/AppData/Local/nvim/python_env/neovim3/Scripts/python.exe')
+let g:python_host_prog=expand('$HOME/AppData/Local/nvim/python_env/neovim/Scripts/python.exe')
 
 call plug#begin('~/AppData/Local/nvim/plugged')
 
@@ -14,14 +14,19 @@ Plug 'tpope/vim-sensible'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'majutsushi/tagbar'
-
 Plug 'vim-airline/vim-airline' 
+
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rafi/awesome-vim-colorschemes'
 
 Plug 'vim-scripts/highlight.vim'
 Plug 'Townk/vim-autoclose'
+
 Plug 'neomake/neomake'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -39,11 +44,14 @@ set number  		" show line number
 
 set mouse=a         " not fixed yet
 
+" Python PEP 8 indentation
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4	" see multiple spaces as tabstops so <BS> does the right thing
-
+filetype indent on
+set autoindent
+set fileformat=unix
 
 " full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 1s; no delay when writing). 
@@ -65,12 +73,23 @@ autocmd! User GoyoLeave Limelight!
 let g:markdown_enable_spell_checking = 0
 let g:markdown_enable_conceal = 0
 
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+autocmd FileType markdown call deoplete#custom#buffer_option('auto_complete', v:false) 
+autocmd FileType tex call deoplete#custom#buffer_option('auto_complete', v:false)
+
+" Python related
+
+" enable this line for python 3 syntax checking
+"let g:pymode_python = 'python3'
+
+
 " Key Mapping
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
 
-" Color scheme  related configuration, TODO: find out if it is best practice
-" to define at the end
+" Color scheme  related configuration, 
+" TODO: find out if it is best practice to define at the end
 
 " Vim-Airline Configuration 
 let g:airline#extensions#tabline#enabled = 1

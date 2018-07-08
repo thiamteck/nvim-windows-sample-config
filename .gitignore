@@ -1,3 +1,5 @@
 autoload/  
 plugged/  
-site/  
+site/
+python_env/
+rplugin.vim

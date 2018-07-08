@@ -15,6 +15,7 @@ Notable enhancements:
     - include [Markdown with Vim] (https://github.com/gabrielelana/vim-markdown)
 - Enhanced UI with [NERDTree] (https://github.com/scrooloose/nerdtree), [vim-airline] (https://github.com/vim-airline/vim-airline)    
 - Many [awesome colorscheme] (https://github.com/rafi/awesome-vim-colorschemes) to choose from, and able to use different colorscheme for GUI and console mode. 
+- Python auto completion with [Deoplete] (https://github.com/Shougo/deoplete.nvim), and [deoplete-jedi] (https://github.com/zchee/deoplete-jedi)
 
 Tested with:
 ---------------
@@ -45,28 +46,23 @@ Configurations Info:
 - Configuration files location: %userprofile%\AppData\Local\nvim\
     - `init.vim` : main configuration files just like `.vimrc`
     - `ginit.vim` : configuration file just for GUI version of neovim
-- Default color scheme directory: %userprofile%\scoop\apps\neovim\0.3.0\Neovim\share\nvim\runtime\colors
+- Built-in color scheme directory: %userprofile%\scoop\apps\neovim\0.3.0\Neovim\share\nvim\runtime\colors
 
 Installation:
 --------------
 1. Install neovim ( https://github.com/neovim/neovim/wiki/Installing-Neovim )
     `scoop install neovim`
-2. Install noevim provider for Python
-    - Somehow virtualenv result in warning in `:checkhealth`, install neovim as global instead for both Python 2 and 3:
-        ```console
-        pip2 install neovim
-        pip3 install neovim
-        ```
+2. Install neovim provider for Python
+    ``` console
+    cd %userprofilei%\AppData\Local\nvim\
+    scripts\setup_python_virtualenv.bat
+
+    ```
 3. Install neovim provider for Node.js too (since I have it already): `npm install -g neovim`
 4. Get dictionary files for spell check:
-    ```console
+    ``` console
     cd %userprofile%\AppData\Local\nvim\
-    md site
-    cd site
-    md spell
-    cd spell
-    curl https://raw.githubusercontent.com/vim/vim/master/runtime/spell/en.utf-8.spl > en.utf-8.spl
-    curl https://raw.githubusercontent.com/vim/vim/master/runtime/spell/en.utf-8.sug > en.utf-8.sug
+    scripts\setup_dictionary.bat
     ```
 5. Install vim-plug ( https://github.com/junegunn/vim-plug )
     ```console
