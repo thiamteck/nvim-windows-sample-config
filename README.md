@@ -8,14 +8,14 @@ Work in progress.
 Notable enhancements:
 ----------------------
 - Log files viewing:
-    - Highlight lines with previous matched pattern via Highlight.vim: <C-h><C-j>
+    - Highlight lines with previous matched pattern via Highlight.vim: `<C-h><C-j>`
 - Tuned for general writing:
-    - distraction free writing via [Goyo] (https://github.com/junegunn/goyo.vim) & [Limelight] (https://github.com/junegunn/limelight.vim)
-    - grammar check with [vim-wordy] (https://github.com/reedes/vim-wordy)
-    - include [Markdown with Vim] (https://github.com/gabrielelana/vim-markdown)
-- Enhanced UI with [NERDTree] (https://github.com/scrooloose/nerdtree), [vim-airline] (https://github.com/vim-airline/vim-airline)    
-- Many [awesome colorscheme] (https://github.com/rafi/awesome-vim-colorschemes) to choose from, and able to use different colorscheme for GUI and console mode. 
-- Python auto completion with [Deoplete] (https://github.com/Shougo/deoplete.nvim), and [deoplete-jedi] (https://github.com/zchee/deoplete-jedi)
+    - distraction free writing via [Goyo](https://github.com/junegunn/goyo.vim) & [Limelight](https://github.com/junegunn/limelight.vim)
+    - grammar check with [vim-wordy](https://github.com/reedes/vim-wordy)
+    - include [Markdown with Vim](https://github.com/gabrielelana/vim-markdown)
+- Enhanced UI with [NERDTree](https://github.com/scrooloose/nerdtree), [vim-airline](https://github.com/vim-airline/vim-airline)    
+- Many [awesome colorscheme](https://github.com/rafi/awesome-vim-colorschemes) to choose from, and able to use different colorscheme for GUI and console mode. 
+- Python auto completion with [Deoplete](https://github.com/Shougo/deoplete.nvim), and [deoplete-jedi](https://github.com/zchee/deoplete-jedi)
 
 Tested with:
 ---------------
@@ -38,8 +38,8 @@ Optional Dependencies:
 -----------------------
 - Python 2.7, Python 3.6
 - Node 8.9.x, npm 5.5.x
-- Visual C++ Redistributable for Visual Studio 2015 ( https://www.microsoft.com/en-my/download/details.aspx?id=48145 )
-- Powerline fonts ( https://medium.com/@slmeng/how-to-install-powerline-fonts-in-windows-b2eedecace58 )
+- [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-my/download/details.aspx?id=48145)
+- [Powerline fonts](https://medium.com/@slmeng/how-to-install-powerline-fonts-in-windows-b2eedecace58)
 
 Configurations Info:
 ---------------------
@@ -50,7 +50,7 @@ Configurations Info:
 
 Installation:
 --------------
-1. Install neovim ( https://github.com/neovim/neovim/wiki/Installing-Neovim )
+1. Install [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
     `scoop install neovim`
 2. Install neovim provider for Python
     ``` console
@@ -64,7 +64,7 @@ Installation:
     cd %userprofile%\AppData\Local\nvim\
     scripts\setup_dictionary.bat
     ```
-5. Install vim-plug ( https://github.com/junegunn/vim-plug )
+5. Install [vim-plug]( https://github.com/junegunn/vim-plug )
     ```console
     cd %userprofile%\AppData\Local\nvim\
     md autoload
