@@ -25,18 +25,18 @@ Tested with:
 Pre-requisite:
 -----------------
 - Windows Powershell
-- Scoop ( https://scoop.sh/ )
+- Scoop(https://scoop.sh/)
     - Open Windows Powershell:
         ```console
         Set-ExecutionPolicy RemoteSigned -scope CurrentUser
         iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
         ```
-- Ctags (install via scoop: `scoop installl ctags`)
+- Ctags (install via scoop: `scoop install ctags`)
 - Git 
+- Python 2.7, Python 3.6
 
 Optional Dependencies:
 -----------------------
-- Python 2.7, Python 3.6
 - Node 8.9.x, npm 5.5.x
 - [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-my/download/details.aspx?id=48145)
 - [Powerline fonts](https://medium.com/@slmeng/how-to-install-powerline-fonts-in-windows-b2eedecace58)
@@ -67,14 +67,7 @@ Installation:
 5. Install [vim-plug]( https://github.com/junegunn/vim-plug )
     ```console
     cd %userprofile%\AppData\Local\nvim\
-    md autoload
-    cd autoload
-    curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > plug.vim
+    scripts\setup_vimplug.bat 
     ```
-6. Configure vim-plug in `init.vim`:
-    ```
-    call plug#begin('%userprofile%\AppData\Local\nvim\plugged')
-    call plug#end()
-    ```
-7. Configure `init.vm` and `ginit.vim` as in this repository
-8. Install plugin via `:PlugInstall`, or `$ nvim +PlugInstall`
+6. Configure `init.vm` and `ginit.vim` as in this repository
+7. Install plugin via `:PlugInstall`, or `$ nvim +PlugInstall`

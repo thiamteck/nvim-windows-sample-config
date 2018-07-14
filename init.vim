@@ -3,8 +3,6 @@
 " must be first line
 set nocompatible
 
-" Installation with virtualenv prompt warning during :checkhealth, install
-" neovim in global instead
 let g:python3_host_prog=expand('$HOME/AppData/Local/nvim/python_env/neovim3/Scripts/python.exe')
 let g:python_host_prog=expand('$HOME/AppData/Local/nvim/python_env/neovim/Scripts/python.exe')
 

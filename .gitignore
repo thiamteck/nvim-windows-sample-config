@@ -3,3 +3,5 @@ plugged/
 site/
 python_env/
 rplugin.vim
+.netrwhist 
+package-lock.json 
