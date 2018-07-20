@@ -53,7 +53,7 @@ set fileformat=unix
 
 " full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 1s; no delay when writing). 
-call neomake#configure#automake('nrwi', 500)
+silent! call neomake#configure#automake('nrwi', 500)
 
 " Tagbar configuration
 let g:tagbar_autofocus = 1
@@ -67,6 +67,10 @@ let g:limelight_conceal_guifg = '#777777'
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+" line wrap by filetype
+autocmd FileType markdown set wrap linebreak nolist
+autocmd FileType tex set wrap linebreak nolist
 
 let g:markdown_enable_spell_checking = 0
 let g:markdown_enable_conceal = 0

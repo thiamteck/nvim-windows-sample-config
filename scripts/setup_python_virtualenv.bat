@@ -2,13 +2,15 @@ md python_env
 cd python_env
 
 py -2 -m virtualenv neovim
-neovim\Scripts\activate
+call neovim\Scripts\activate
 pip install neovim
 pip install jedi
-neovim\Scripts\deactivate
+call neovim\Scripts\deactivate
 
 py -3 -m virtualenv neovim3
-neovim3\Scripts\activate
+call neovim3\Scripts\activate
 pip install neovim
 pip install jedi
-neovim3\Scripts\deactivate
+call neovim3\Scripts\deactivate
+
+cd ..
