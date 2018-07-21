@@ -44,10 +44,10 @@ Optional Dependencies:
 
 Configurations Info:
 ---------------------
-- Configuration files location: %userprofile%\AppData\Local\nvim\
+- Configuration files location: `%userprofile%\AppData\Local\nvim\`
     - `init.vim` : main configuration files just like `.vimrc`
     - `ginit.vim` : configuration file just for GUI version of neovim
-- Built-in color scheme directory: %userprofile%\scoop\apps\neovim\0.3.0\Neovim\share\nvim\runtime\colors
+- Built-in color scheme directory: `%userprofile%\scoop\apps\neovim\0.3.0\Neovim\share\nvim\runtime\colors`
 
 Installation:
 --------------
