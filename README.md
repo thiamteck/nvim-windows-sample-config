@@ -59,7 +59,11 @@ Installation:
     del /s /q *
     for /f "delims=" %x in ('dir /b /ad .') do rd /s /q "%x"
     ````
-3. Clone this repository: `git clone https://github.com/thiamteck/nvim-windows-sample-config.git .`
+3. Clone this repository: 
+    ```console
+    cd %userprofile%\AppData\Local\nvim 
+    git clone https://github.com/thiamteck/nvim-windows-sample-config.git .
+    ```
 4. Run installation script:
     ```console
     cd %userprofile%\AppData\Local\nvim
