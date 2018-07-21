@@ -13,6 +13,7 @@ Notable enhancements:
     - distraction free writing via [Goyo](https://github.com/junegunn/goyo.vim) & [Limelight](https://github.com/junegunn/limelight.vim)
     - grammar check with [vim-wordy](https://github.com/reedes/vim-wordy)
     - include [Markdown with Vim](https://github.com/gabrielelana/vim-markdown)
+    - soft line wrap for text file and markdown file
 - Enhanced UI with [NERDTree](https://github.com/scrooloose/nerdtree), [vim-airline](https://github.com/vim-airline/vim-airline)    
 - Many [awesome colorscheme](https://github.com/rafi/awesome-vim-colorschemes) to choose from, and able to use different colorscheme for GUI and console mode. 
 - Python auto completion with [Deoplete](https://github.com/Shougo/deoplete.nvim), and [deoplete-jedi](https://github.com/zchee/deoplete-jedi)
@@ -33,7 +34,7 @@ Pre-requisite:
         ```
 - Ctags (install via scoop: `scoop install ctags`)
 - Git 
-- Python 2.7, Python 3.6
+- Python 2.7, Python 3.6 (with pip, virtualenv)
 
 Optional Dependencies:
 -----------------------
@@ -52,22 +53,17 @@ Installation:
 --------------
 1. Install [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
     `scoop install neovim`
-2. Install neovim provider for Python
-    ``` console
-    cd %userprofilei%\AppData\Local\nvim\
-    scripts\setup_python_virtualenv.bat
-
-    ```
-3. Install neovim provider for Node.js too (since I have it already): `npm install -g neovim`
-4. Get dictionary files for spell check:
-    ``` console
-    cd %userprofile%\AppData\Local\nvim\
-    scripts\setup_dictionary.bat
-    ```
-5. Install [vim-plug]( https://github.com/junegunn/vim-plug )
+2. Delete default configuration files (CAUTION: backup your files if this is not a fresh installation): 
     ```console
-    cd %userprofile%\AppData\Local\nvim\
-    scripts\setup_vimplug.bat 
+    cd %userprofile%\AppData\Local\nvim
+    del /s /q *
+    for /f "delims=" %x in ('dir /b /ad .') do rd /s /q "%x"
+    ````
+3. Clone this repository: `git clone https://github.com/thiamteck/nvim-windows-sample-config.git .`
+4. Run installation script:
+    ```console
+    cd %userprofile%\AppData\Local\nvim
+    scripts\express_setup.bat
     ```
-6. Configure `init.vm` and `ginit.vim` as in this repository
-7. Install plugin via `:PlugInstall`, or `$ nvim +PlugInstall`
+5. (Optional) Install neovim provider for Node.js: `npm install -g neovim`
+6. Install plugin with command: `nvim +PlugInstall`
